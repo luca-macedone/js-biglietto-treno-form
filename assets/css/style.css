@@ -39,9 +39,38 @@ body {
 }
 
 .hidden {
-    display: block;
+    display: none;
+}
+
+.ms-text-sm {
+    font-size: .75rem;
 }
 
 .card {
     box-shadow: 0 0 1rem var(--ms-shadow);
+}
+
+.card label {
+    width: 100%;
+}
+
+.card input,
+.card select 
+{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    border-color: var(--ms-primary);
+}
+
+.card thead th:first-child,
+.card tbody td:first-child
+{
+    width: 30%;
+}
+
+.card thead.border-top,
+.card tbody.border-bottom
+{
+    border-color: var(--ms-secondary) !important;
 }

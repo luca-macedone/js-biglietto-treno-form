@@ -61,13 +61,20 @@ submitBtn.addEventListener("click", function(){
         const targetCarriageEl = document.querySelector("#target-carriage");
         const targetCpEl = document.querySelector("#target-carriage-code");
         const targetPriceEl = document.querySelector("#target-price");
-        // il risultato lo stampo normalizzato con due decimali
-        //resultBox.innerHTML = `Ciao ${userName} il prezzo del tuo biglietto sarà di €${price.toFixed(2)}`;
+        // stampo il nome del cliente
         targetNameEl.innerHTML = userName;
+        // stampo il tipo di biglietto
         targetTicketEl.innerHTML = ticketType;
+        // stampo un numero randomico per rappresentare la carrozza
         targetCarriageEl.innerHTML = Math.floor(Math.random()*15);
+        // stampo un numero randomico per rappresentare il CP
         targetCpEl.innerHTML = Math.floor(Math.random()*100000);
+        // il risultato lo stampo normalizzato con due decimali
         targetPriceEl.innerHTML = `€${price.toFixed(2)}`;
+        const titleEl = document.querySelector("#title");
+        const ticketEl = document.querySelector("#ticket-section");
+        titleEl.classList.remove("hidden");
+        ticketEl.classList.remove("hidden");
     }
 });
 

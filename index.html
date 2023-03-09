@@ -27,15 +27,15 @@
                 <div class="card p-4">
                     <div class="row g-3">
                         <div class="col-4">
-                            <label for="input-username">Nome Cognome</label>
+                            <label class="ms-color-primary fw-semibold text-center" for="input-username">Nome Cognome</label>
                             <input class="form-control" type="text" name="" id="input-username">
                         </div>
                         <div class="col-4">
-                            <label for="input-distance">Km da percorrere</label>
+                            <label class="ms-color-primary fw-semibold text-center" for="input-distance">Km da percorrere</label>
                             <input class="form-control" type="number" name="" id="input-distance">
                         </div>
                         <div class="col-4">
-                            <label for="input-age">Fascia d'età</label>
+                            <label class="ms-color-primary fw-semibold text-center" for="input-age">Fascia d'età</label>
                             <select class="form-select" id="input-age">
                                 <option selected>Choose...</option>
                                 <option value="1">Under18</option>
@@ -50,29 +50,30 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 hidden">
+            <div class="col-12 hidden" id="title">
                 <h2 class="ms-color-light text-uppercase fw-bolder text-center fs-2 mt-4 mb-3">Il tuo biglietto</h2>
             </div>
-            <div class="col-12 hidden">
+            <div class="col-12 hidden" id="ticket-section">
                 <div class="card rounded-0 p-3" id="temporary-target">
-                    <table class="table">
-                        <thead>
+                    <h3 class="text-uppercase ms-color-dark fs-5 fw-bolder">Dettaglio passeggeri</h3>
+                    <table>
+                        <thead class="border-top">
                           <tr>
-                            <th scope="col">
-                                <h3 class="text-uppercase ms-color-dark fs-5 fw-bolder">Dettaglio passeggeri</h3>
+                            <th class="ms-bg-secondary p-3 pb-0">
+                                <h3 class="text-uppercase ms-color-dark fs-5 fw-bolder">Nome passeggero</h3>
                             </th>
-                            <th scope="col">Offerta</th>
-                            <th scope="col">Carrozza</th>
-                            <th scope="col">Codice CP</th>
-                            <th scope="col">Costo biglietto</th>
+                            <th class="ps-3">Offerta</th>
+                            <th>Carrozza</th>
+                            <th>Codice CP</th>
+                            <th>Costo biglietto</th>
                           </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="border-bottom">
                           <tr>
-                            <th scope="row" id="target-name">
+                            <td class="ms-bg-secondary p-3 fw-bold" id="target-name">
                                 Lorem, ipsum.
-                            </th>
-                            <td id="target-ticket-type">
+                            </td>
+                            <td class="ps-3" id="target-ticket-type">
                                 Lorem, ipsum.
                             </td>
                             <td id="target-carriage">12</td>
