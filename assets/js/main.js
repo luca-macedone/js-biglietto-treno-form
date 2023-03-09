@@ -39,13 +39,13 @@ submitBtn.addEventListener("click", function(){
         price = distance * priceFactor;
         // verifico se l'utente può accedere a degli sconti
         switch(userAge){
-            case "1":
+            case "under-18":
                 // se l'utente è minorenne..
                 // calcolo il prezzo applicando lo sconto per minorenni
                 price = price - ((price * discountUnder18) / 100);
                 ticketType = "Biglietto Under 18";
                 break;
-            case "3":
+            case "over-65":
                 // altrimenti, se è un anziano
                 // calcolo il prezzo applicando lo sconto per anziani
                 price = price - ((price * discountOver65) / 100);
