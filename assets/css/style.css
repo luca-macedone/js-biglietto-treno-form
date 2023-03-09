@@ -1,0 +1,47 @@
+:root {
+    --ms-primary: #cb004e;
+    --ms-secondary: #818081;
+    --ms-dark: #000000;
+    --ms-shadow: #0000006a;
+    --ms-light: #fefffe;
+}
+
+body {
+    background-color: var(--ms-primary);
+}
+
+.ms-color-dark {
+    color: var(--ms-dark);
+}
+
+.ms-color-light {
+    color: var(--ms-light);
+}
+
+.ms-color-primary {
+    color: var(--ms-primary);
+}
+
+.ms-bg-dark {
+    background-color: var(--ms-dark);
+}
+
+.ms-bg-light {
+    background-color: var(--ms-light);
+}
+
+.ms-bg-primary {
+    background-color: var(--ms-primary);
+}
+
+.ms-bg-secondary {
+    background-color: var(--ms-secondary);
+}
+
+.hidden {
+    display: block;
+}
+
+.card {
+    box-shadow: 0 0 1rem var(--ms-shadow);
+}
