@@ -17,6 +17,8 @@ const discountUnder18 = 20;
 const discountOver65 = 40;
 // Variabile contenente il prezzo finale
 let price;
+// Variabile per definire il tipo di biglietto
+let ticketType;
 
 const submitBtn = document.querySelector("#submit");
 const resetBtn = document.querySelector("#reset");
@@ -41,18 +43,31 @@ submitBtn.addEventListener("click", function(){
                 // se l'utente è minorenne..
                 // calcolo il prezzo applicando lo sconto per minorenni
                 price = price - ((price * discountUnder18) / 100);
+                ticketType = "Biglietto Under 18";
                 break;
             case "3":
                 // altrimenti, se è un anziano
                 // calcolo il prezzo applicando lo sconto per anziani
                 price = price - ((price * discountOver65) / 100);
+                ticketType = "Biglietto Over 65";
                 break;
+            default: 
+                ticketType = "Biglietto Standard";
         }
         // se non è uno dei casi precedenti posso stampare il risultato senza sconti
+        // raccolgo gli elementi per         
+        const targetNameEl = document.querySelector("#target-name");
+        const targetTicketEl = document.querySelector("#target-ticket-type");
+        const targetCarriageEl = document.querySelector("#target-carriage");
+        const targetCpEl = document.querySelector("#target-carriage-code");
+        const targetPriceEl = document.querySelector("#target-price");
         // il risultato lo stampo normalizzato con due decimali
-        //console.log(`Il prezzo del tuo biglietto sarà €${price.toFixed(2)}`);
-        const resultBox = document.querySelector("#temporary-target");
-        resultBox.innerHTML = `Ciao ${userName} il prezzo del tuo biglietto sarà di €${price.toFixed(2)}`;
+        //resultBox.innerHTML = `Ciao ${userName} il prezzo del tuo biglietto sarà di €${price.toFixed(2)}`;
+        targetNameEl.innerHTML = userName;
+        targetTicketEl.innerHTML = ticketType;
+        targetCarriageEl.innerHTML = Math.floor(Math.random()*15);
+        targetCpEl.innerHTML = Math.floor(Math.random()*100000);
+        targetPriceEl.innerHTML = `€${price.toFixed(2)}`;
     }
 });
 
